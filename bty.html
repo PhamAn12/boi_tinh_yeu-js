@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BTY</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+		function getText(id) {
+			var s = document.getElementById(id).value;
+			var sum = 0;
+			for (i=0; i<s.length; i++) {
+				sum += s.charCodeAt(i); 
+			}
+			return sum;
+		}
+		function gettext(){
+			var result = (getText('input1') * getText('input2')) % 100;
+			$('.output').html('<h2><b>'+result+'%</b></h2>');
+		}
+	</script>
+	<style type="text/css">
+	input{
+		width : 290px;
+	};
+</style>
+<style>
+b {
+	color: red;
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<table align="center" bgcolor="aqua" width="300px" >
+			<tr>
+				<td>&nbsp;Họ tên người 1</td>
+			</tr>
+			<tr>
+				<td align="center"><input id="input1" type="text"></td>
+			</tr>
+			<tr>
+				<td>&nbsp;Họ tên người 2</td>
+			</tr>
+			<tr>
+				<td align="center"><input id="input2" type="text"></td>
+			</tr>
+			<tr>
+				<td align="center" class="output" color="red"> </td>
+			</tr>
+			<tr>
+				<td align="center"><button id="calculator" class="btn btn-success" onclick="gettext()">Tính toán</button></td>
+			</tr>
+		</table>
+	</div>
+	
+</body>
+</html>
