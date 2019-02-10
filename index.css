@@ -22,5 +22,5 @@ table {
 }
 
 body {
-	background: pink;
+	background: linear-gradient(to right, #E91E63, #abdce6);
 }
